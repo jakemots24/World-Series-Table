@@ -102,7 +102,9 @@ const getScoreLine = ({ homeTeam, awayTeam }) => {
   return `${teamNames} ${scoreLine}`;
 };
 
-const chart1 = makeChart(bravesGames, 'Atlanta');
-// const chart2 = makeChart(bravesGames, 'Houston');
-document.body.prepend(chart1);
-// document.body.prepend(chart2);
+const atlantaSection = document.querySelector('#ab');
+const houstonSection = document.querySelector('#ha');
+const abChart = makeChart(bravesGames, 'Atlanta');
+const haChart = makeChart(bravesGames, 'Houston');
+atlantaSection.append(abChart);
+houstonSection.append(haChart);
